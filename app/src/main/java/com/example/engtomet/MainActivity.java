@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    double result;
+    double result = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(number.getText().toString().equals("")){ // Will default to 0 if the user enters nothing
+                    number.setText("0");
+                }
                 double numberDouble = Double.parseDouble(number.getText().toString());
+
                 if(group.getSelectedItemPosition() == 0){
                     MilesToKilo(numberDouble);
                     resultString.setText(result + " Kilometers");
@@ -40,12 +44,17 @@ public class MainActivity extends AppCompatActivity {
                     InchesToCent(numberDouble);
                     resultString.setText(result + " Centimeters");
                 }
+                else if(group.getSelectedItemPosition() == 4){
+                    TeasToMil(numberDouble);
+                    resultString.setText(result + " Milliliters");
+                }
 
 
             }
         });
     }
 
+    // The methods used to convert to metric
     void MilesToKilo(double _number){
         result = _number * 1.609344;
     }
@@ -57,5 +66,8 @@ public class MainActivity extends AppCompatActivity {
     }
     void InchesToCent(double _number){
         result = _number * 2.54;
+    }
+    void TeasToMil(double _number){
+        result = _number * 4.92892;
     }
 }

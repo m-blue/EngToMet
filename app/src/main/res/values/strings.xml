@@ -5,6 +5,7 @@
         <item>Gallons to Liters</item>
         <item>Pounds to Kilograms</item>
         <item>Inches to Centimeters</item>
+        <item>Teaspoons to Milliliters</item>
     </string-array>
     <string name="txtNumber">Enter your number</string>
     <string name="txtButton">Convert</string>
