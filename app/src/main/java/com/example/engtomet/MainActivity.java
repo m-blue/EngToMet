@@ -26,18 +26,22 @@ public class MainActivity extends AppCompatActivity {
                 double numberDouble = Double.parseDouble(number.getText().toString());
                 if(group.getSelectedItemPosition() == 0){
                     MilesToKilo(numberDouble);
+                    resultString.setText(result + " Kilometers");
                 }
                 else if(group.getSelectedItemPosition() == 1){
                     GalleonToLiters(numberDouble);
+                    resultString.setText(result + " Liters");
                 }
                 else if(group.getSelectedItemPosition() == 2){
                     PoundsToKilo(numberDouble);
+                    resultString.setText(result + " Kilograms");
                 }
                 else if(group.getSelectedItemPosition() == 3){
                     InchesToCent(numberDouble);
+                    resultString.setText(result + " Centimeters");
                 }
 
-                resultString.setText(" " + result);
+
             }
         });
     }
