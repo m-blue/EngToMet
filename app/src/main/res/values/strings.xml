@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EngToMet</string>
+    <string-array name="txtGroup">
+        <item>Miles to Kilometers</item>
+        <item>Gallons to Liters</item>
+        <item>Pounds to Kilograms</item>
+        <item>Inches to Centimeters</item>
+    </string-array>
+    <string name="txtNumber">Enter your number</string>
+    <string name="txtButton">Convert</string>
+    <string name="txtTitle">English to Metric Converter</string>
+</resources>
